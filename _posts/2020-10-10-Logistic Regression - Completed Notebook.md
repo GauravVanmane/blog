@@ -1,7 +1,13 @@
 
+---
+title: Logistic Regression
+---
+
+
+
 ![Rhyme](https://rhyme.com/assets/img/logo-dark.png)
 
-# Deep Learning Fundamentals - Logistic Regression
+# Deep Learning Fundamentals - 
 
 # Task 1: Introduction
 
