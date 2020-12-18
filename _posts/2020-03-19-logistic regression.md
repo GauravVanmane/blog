@@ -1,4 +1,4 @@
-###Lets implement Logistic Regression from scratch using the numerical python library numpy.
+### Lets implement Logistic Regression from scratch using the numerical python library numpy.
 
 ```python
 import random
@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 
 print('Libraries imported')
 ```
-###Task 2: Hyperparameters
+### Task 2: Hyperparameters
 
 ```python
 lr = 0.3
@@ -19,7 +19,7 @@ batch_size = 300
 iterations = 40
 ```
 
-###Task 3: Dataset
+### Task 3: Dataset
 
 ```python
 (X_train, Y_train), (X_test, Y_test) = helpers.dataset.get_data()
@@ -42,7 +42,7 @@ helpers.plt.show_example(X_train[0], Y_train[0])
 ```python
 helpers.plt.show_example(X_train[-1], Y_train[-1])
 ```
-###Task 4: A Mini Batch of Examples
+### Task 4: A Mini Batch of Examples
 
 ```python
 X_batch, Y_batch = helpers.dataset.get_random_batch(X_train, Y_train, 1)
@@ -62,7 +62,7 @@ X_batch, Y_batch = helpers.dataset.get_random_batch(X_train, Y_train, 10)
 helpers.plt.show_ten_examples(X_batch, Y_batch, Y_batch)
 ```
 
-###Task 5: Create Model
+### Task 5: Create Model
 
 ```python
 class LogisticModel:
@@ -84,7 +84,7 @@ model = LogisticModel(num_features=784)
 model.summary()
 ```
 
-###Task 6: Forward Pass
+### Task 6: Forward Pass
 
 ```python
 class LogisticModel(LogisticModel):
@@ -100,7 +100,7 @@ class LogisticModel(LogisticModel):
         return A, loss
 ```
 
-###Task 7: Backward Pass
+### Task 7: Backward Pass
 
 ```python
 class LogisticModel(LogisticModel):
@@ -112,7 +112,7 @@ class LogisticModel(LogisticModel):
         return dW, db
 ```
 
-###Task 8: Update Parameters
+### Task 8: Update Parameters
 
 ```python
 class LogisticModel(LogisticModel):
@@ -121,7 +121,7 @@ class LogisticModel(LogisticModel):
         self.b -= lr * db
 ```
 
-###Task 9: Check Model Performance
+### Task 9: Check Model Performance
 
 ```python
 class LogisticModel(LogisticModel):
@@ -153,7 +153,7 @@ preds, _ = model.predict(X)
 helpers.plt.show_ten_examples(X, Y, preds)
 ```
 
-###Task 10: Training Loop
+### Task 10: Training Loop
 
 ```python
 class LogisticModel(LogisticModel):
@@ -179,7 +179,7 @@ class LogisticModel(LogisticModel):
         print('Training finished.')
 ```
 
-###Task 11: Training the Model
+### Task 11: Training the Model
 
 
 ```python
