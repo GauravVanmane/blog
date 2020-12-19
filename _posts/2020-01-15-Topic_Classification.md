@@ -1,7 +1,4 @@
 
-<img align=center src="https://rhyme.com/assets/img/logo-dark.png"></img>
-<h2 align=center> Topic Classification with Tensorflow and Keras</h2>
-
 ## Task 1: Project Overview and Import Modules
 
 
