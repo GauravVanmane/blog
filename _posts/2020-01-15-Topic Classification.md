@@ -206,7 +206,7 @@ plt.show()
 ```
 
 
-![png](Topic_Classification_files/Topic_Classification_20_0.png)
+![png](img/Topic_Classification_20_0.pngs)
 
 
 
