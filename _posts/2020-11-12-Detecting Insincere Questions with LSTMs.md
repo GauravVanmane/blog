@@ -1,4 +1,6 @@
+The internet has become the pre-eminent source of sharing information in the world today. People use content based websites such as Quora, Reddit and StackOverflow, posting genuine questions pertaining to various domains. Although majority of questions are genuine, it may so happen that some eccentric person posts a statement which is not a genuine query. In order to enure the plain sailing dissemination of useful information online and avoid spreading toxic insincere queries, we need to screen them first so that they can be detected beforehand and prevented from subsisting online. In this project we see how this can be done using word embeddings and long short term memory networks.
 
+We will import all necessary libraries.
 
 ```python
 from keras.preprocessing.text import Tokenizer
@@ -12,17 +14,21 @@ import math
 from sklearn.model_selection import train_test_split
 ```
 
+Next lets read our training data. The dataframe consists of the question id, the corresponding question and the target label. A target label of ‘0’ corresponds to a sincere question and ‘1’ corresponds to an insincere question.
+
 
 ```python
 train_df = pd.read_csv('/kaggle/input/quora-insincere-questions-classification/train.csv')
 train_df.head()
 ```
 
+Next up we split the dataframe into train and test splits.
 
 ```python
 train_df, val_df = train_test_split(train_df, test_size = 0.2)
 ```
 
+Next up we split the dataframe into train and test splits.
 
 ```python
 embeddings_index = {}
@@ -66,6 +72,58 @@ def batch_gen(train_df):
             yield text_arr, np.array(train_df['target'][i*batch_size:(i+1)*batch_size])
 ```
 
+
+1.RNNs
+Recurrent Neural Networks are a class of artificial neural
+
+networks that were first introduced to manipulate sequential
+
+data. RNNs exhibit temporal dynamic behavior which allow
+
+them to transfer information more easily from one time step
+
+to another. The information from the previous states is termed
+
+as a hidden state.
+
+RNNs showed good results in a majority of applications
+
+ranging from time series prediction, text generation, biological modeling, speech recognition etc. However vanilla RNNs
+
+suffer from a major problem of vanishing gradients. As many
+
+other machine learning algorithms, RNNs are optimized using
+
+Back Propagation and due to their sequential nature the error
+
+decays severely as it propagates back through layers. The
+
+gradient which is very small, thus effectively prevents the
+
+weight from changing its value. In the worst case the neural
+
+network may even stop training further.
+
+1.LSTMs
+In order to remedy the vanishing gradients problem, Long
+
+Short Term Memory Networks were introduced, the architecture of which consists of different gates viz update, relevance,
+
+forget and output. This introduction of a tweaking in the
+
+architecture of RNNs enabled LSTMs to remember relevant
+
+context from long range dependencies and introduced the
+
+flexibility to use long sentences.
+
+To boost the performance of existing architectures Bidirectional LSTMs were introduced that can process sequences
+
+from forward as well as backward directions intended for the
+
+network to learn better understandings from both sequence
+
+directions
 
 ```python
 from keras.models import Sequential
