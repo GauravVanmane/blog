@@ -206,7 +206,7 @@ plt.show()
 ```
 
 
-![png](https://raw.githubusercontent.com/GauravVanmane/blog/gh-pages/img/Topic_Classification_20_0.png)
+![png](img/Topic_Classification_20_0.png)
 
 
 
