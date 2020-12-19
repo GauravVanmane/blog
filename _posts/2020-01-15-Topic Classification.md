@@ -206,7 +206,7 @@ plt.show()
 ```
 
 
-![png](img/Topic_Classification_20_0.pngs)
+![](img/Topic_Classification_20_0.pngs)
 
 
 
@@ -221,7 +221,7 @@ plt.show()
 ```
 
 
-![png](Topic_Classification_files/Topic_Classification_21_0.png)
+![](img/Topic_Classification_21_0.png)
 
 
 
